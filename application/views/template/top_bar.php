@@ -63,9 +63,10 @@
                                 <p class="text-muted mb-0">Administrator</p>
                             </div>
                         </div>
-                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                        <a class="dropdown-item" href="inbox.html">Inbox</a>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                        <!-- a class="dropdown-item" href="profile.html">My Profile</a>
+                        <a class="dropdown-item" href="inbox.html">Inbox</a -->
+                        <!--a class="dropdown-item" href="<?php echo base_url('deconnexion') ?>">Deconnexion</a -->
+                        <a class="dropdown-item" href="<?php echo base_url()."deconnexion" ?>">Deconnexion</a>
                     </div>
                 </li>
 

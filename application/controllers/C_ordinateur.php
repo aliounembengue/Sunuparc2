@@ -16,7 +16,7 @@ class C_ordinateur extends MY_Controller
         $session_token          = $t_session->session_token;
         $range                  = "0-200";
         $data['ordinateurs']    = $this->ordi->list_ordinateur($session_token,$range);
-
+		ve($data);
         
 
         $this->load->view('V_ordinateur',$data);

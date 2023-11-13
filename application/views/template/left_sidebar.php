@@ -14,6 +14,7 @@
                             <ul>
                                 <li><a href="<?php echo base_url(); ?>C_unmify" class="waves-effect menu" id="menu_unmify">Unmify</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_table" class="waves-effect menu" id="menu_table">Table</a></li>
+                                <li><a href="<?php echo base_url(); ?>C_ordinateur" class="waves-effect menu" id="menu_ordinateur">Liste ordinateurs</a></li>
                             </ul>
                         </li>
                         
