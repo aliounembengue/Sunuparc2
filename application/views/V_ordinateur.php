@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="table-responsive">
-                    <table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped">
+                    <table id="datatable-buttons" class="table border-0 star-student table-hover table-center mb-0 datatables table-striped">
                         <thead class="student-thread">
 						<tr>
 							<th style="width: 10%">id</th>
@@ -47,13 +47,37 @@
     </div>
 </div>
 
+<!--script type="text/javascript">
+
+    $(document).ready(function () {
+            
+	$('#datatables-buttons').managing_ajax({
+
+	});
+
+    });
+</script-->
+
+
 <script type="text/javascript">
 
     $(document).ready(function () {
             
-	$('#datatable-buttons').managing_ajax({
+            $('#datatable-buttons').managing_ajax({
+                id_modal_form: 'modal_form', //id du modal qui contient le formulaire
 
-	});
+                id_form: 'form', //id du formulaire
+                url_submit: "<?php echo site_url('C_ordinateur/liste_ordinateur')?>", //url du save (données envoyés par post)
+
+                title_modal_add: 'Ajouter eleve', //Title du modal à l'ouverture en mode ajout
+                focus_add: 'prenom', //l'emplacement du focus en mode ajout
+
+                title_modal_edit: 'Modifier eleve', //Title du modal à l'ouverture en mode edit
+                focus_edit: 'prenom',//l'emplacement du focus en mode edit
+
+                url_edit: "<?php echo site_url('C_eleve/recup_eleve')?>", //url le fonction qui recupére la données de la ligne
+                url_delete: "<?php echo site_url('C_eleve/delete_eleve')?>", //url de la fonction supprimé
+            });
 
     });
 </script>
