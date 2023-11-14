@@ -1,6 +1,6 @@
 <!-- Right Sidebar -->
 <div class="side-bar right-bar nicescroll">
-    <h5 class="text-center">ANNEES ACADEMIQUES</h5>
+    <!--h5 class="text-center">ANNEES ACADEMIQUES</h5-->
     <div class="contact-list nicescroll">
         <ul class="list-group contacts-list">
             
