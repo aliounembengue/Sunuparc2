@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['base_url'] = 'http://localhost/simen/';
+$config['base_url'] = 'http://localhost:81/sunuparc2/';
 
 $config['index_page'] = '';
 
