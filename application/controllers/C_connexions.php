@@ -76,7 +76,7 @@ class C_connexions extends CI_Controller {
 			//ve($this->input->post('email'));
 			//authentification de l'utilisateur
 			$user = $this->conn->init_session($login, $pwd);
-			$user = $this->conn->authentication($login, $pwd);
+			//$user = $this->conn->authentication($login, $pwd);
 			//ve($user);
 			//exit;
 		
@@ -106,12 +106,14 @@ class C_connexions extends CI_Controller {
 				// creation de la session 
 
 			
-				$this->session->set_userdata("id_utilisateur", $user->id_utilisateur);
-				$this->session->set_userdata("nom", $user->nom);
-				$this->session->set_userdata("prenom", $user->prenom);
-				$this->session->set_userdata("id_profil", $user->id_profil);
+				$this->session->set_userdata("id_utilisateur", $user->session->glpiID);
+				$this->session->set_userdata("nom", $user->session->glpirealname);
+				$this->session->set_userdata("prenom", $user->session->glpifirstname);
+				$this->session->set_userdata("session_token", $user->session_token);
+
+				//$this->session->set_userdata("id_profil", $user->id_profil);
 				$this->session->set_userdata("photo", $photo);
-				$this->session->set_userdata("libelle_profil", $user->libelle_profil);
+				//$this->session->set_userdata("libelle_profil", $user->libelle_profil);
 				
 				//on lance la page par defaut de l'application ie le dashboard 
 				header("Location:".base_url()."dashboard");
