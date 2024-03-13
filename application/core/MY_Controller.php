@@ -13,8 +13,8 @@ class MY_Controller extends CI_Controller {
 		if(!defined('GLPI_URL'))
 		{
 			define('GLPI_URL', "https://sunuparc.education.sn/apirest.php/");
-			define('GLPI_USER', "simen");
-			define('GLPI_PWD', "simen@123");
+			//define('GLPI_USER', "simen");
+			//define('GLPI_PWD', "simen@123");
 			define('GLPI_APP_TOKEN', "sViUhaQQvlwyi8Ous5lmzYPhR3WwTzzVBblCdPo4");
 			define('GLPI_AUTH_TYPE', "Basic");
 		}

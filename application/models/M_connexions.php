@@ -11,6 +11,32 @@ class M_connexions extends MY_Model {
 	}
 
 
+	public function init_session ($login,$password)
+	{
+		if(!defined('GLPI_URL'))
+		{
+			define('GLPI_URL', "https://sunuparc.education.sn/apirest.php/");
+			define('GLPI_APP_TOKEN', "sViUhaQQvlwyi8Ous5lmzYPhR3WwTzzVBblCdPo4");
+			define('GLPI_AUTH_TYPE', "Basic");
+		}
+
+		//$params = "computer/?app_token=".GLPI_APP_TOKEN"&"$session_token;
+		$params = "initSession/?get_full_session=true&app_token=".GLPI_APP_TOKEN;
+		
+		$credential = array(
+			'login'=>$login,
+			'password'=>$password,
+			'auth_type'=>GLPI_AUTH_TYPE
+		);
+	
+		//appel API connexion 
+	  
+		return apiGetData(GLPI_URL, $params, TRUE, $credential);
+	
+		
+	}
+
+
 	//Recupération année en cours
 	public function get_annne_encours()
     {
