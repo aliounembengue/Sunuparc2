@@ -104,7 +104,6 @@ class C_connexions extends CI_Controller {
 				}
 
 				// creation de la session par API
-
 			
 				$this->session->set_userdata("id_utilisateur", $user->session->glpiID);
 				$this->session->set_userdata("nom", $user->session->glpirealname);
