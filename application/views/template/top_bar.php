@@ -48,7 +48,7 @@
                                 alt="Soeng Souy">
                             <div class="user-text">
                                 <h6><?php echo $this->session->prenom." ".$this->session->nom; ?>  </h6>
-                                <p class="text-muted mb-0">Administrator</p>
+                                <p class="text-muted mb-0">Administrateur</p>
                             </div>
                         </span>
                     </a>
@@ -59,8 +59,8 @@
                                     class="avatar-img rounded-circle">
                             </div>
                             <div class="user-text">
-                                <h6>Soeng Souy</h6>
-                                <p class="text-muted mb-0">Administrator</p>
+                                <h6><?php echo $this->session->prenom." ".$this->session->nom; ?></h6>
+                                <p class="text-muted mb-0">Administrateur</p>
                             </div>
                         </div>
                         <!-- a class="dropdown-item" href="profile.html">My Profile</a>

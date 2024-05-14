@@ -12,14 +12,12 @@
                         <li class="submenu">
                             <a href="#"><i class="fas fa-cube"></i> <span> Parc</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="<?php echo base_url(); ?>C_unmify" class="waves-effect menu" id="menu_unmify">Unmify</a></li>
-                                <li><a href="<?php echo base_url(); ?>C_table" class="waves-effect menu" id="menu_table">Table</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_ordinateur" class="waves-effect menu" id="menu_ordinateur">Liste ordinateurs</a></li>
+                                <li><a href="<?php echo base_url(); ?>C_printer" class="waves-effect menu" id="menu_printer">Liste Imprimantes</a></li>
                             </ul>
                         </li>
 							<li class="submenu">
-								<a href="#"><i class="fas fa-graduation-cap"></i> <span> Imprimantes</span> <span class="menu-arrow"></span></a>
-								<ul>
+                            	<ul>
 									<li><a href="<?php echo base_url(); ?>C_printer" class="waves-effect menu" id="menu_printer">Liste Imprimantes</a></li>
 								</ul>
 							</li>

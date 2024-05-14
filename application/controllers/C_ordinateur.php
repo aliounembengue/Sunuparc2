@@ -12,8 +12,8 @@ class C_ordinateur extends MY_Controller
     public function index()
     {
         
-        $t_session              = init_session();
-        $session_token          = $t_session->session_token;
+       // $t_session              = init_session();
+        $session_token          = $this->session->session_token;
         $range                  = "0-200";
         $data['ordinateurs']    = $this->ordi->list_ordinateur($session_token,$range);
 		
