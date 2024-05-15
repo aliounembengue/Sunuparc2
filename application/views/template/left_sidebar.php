@@ -21,6 +21,12 @@
                                 <li><a href="<?php echo base_url(); ?>C_duplicop" class="waves-effect menu" id="menu_duplicop">duplicopieur</a></li>
                             </ul>
                         </li>
+						<li class="submenu">
+                            <a href="#"><i class="fas fa-cube"></i> <span> Personnel</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="<?php echo base_url(); ?>C_personnel" class="waves-effect menu" id="menu_personnel">Liste personnel</a></li>
+                            </ul>
+                        </li>
 							<li class="submenu">
 								<a href="#"><i class="fas fa-earphones-alt"></i> <span> Assistance</span> <span class="menu-arrow"></span></a>
 								<ul>
