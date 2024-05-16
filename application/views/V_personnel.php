@@ -32,6 +32,7 @@
 									<td><?php echo $perso->prenom_ens; ?></td>
 									<td><?php echo $perso->tel_ens; ?></td>
 									<td><?php echo $perso->email_ens_pro; ?></td>
+									<td><?php echo $perso->sexe_ens; ?></td>
 									
 									<td class="actions" style="width: 1%; text-align: center; white-space: nowrap">
 										<a href="#" class="on-default btn_edit" id='<?php echo $perso->ien_ens; ?>'><i class="fa fa-pencil"></i></a>&nbsp;

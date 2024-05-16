@@ -23,52 +23,6 @@
 
 //API Post generic
 
-function api_base_url($base)
-    {
-        switch($base)
-        {
-            case  'ien':
-                return 'https://apps.education.sn/';
-                break;
-            case  'apps':
-                return 'https://apps.education.sn/';
-                break;
-            case  'ien_link':
-                return 'https://ien.education.sn/';
-                break;
-            case  'management':
-                return 'https://management.education.sn/';
-                break;
-            case  'codeco':
-                return 'https://codeco.education.sn/';
-            case  'green':
-                return 'https://green.education.sn/';
-                break;
-            case  'so':
-                return 'https://senorientation.education.sn/';
-                break;
-            case  'enseignant':
-            
-                if(ENVIRONMENT == 'production')
-                    return 'https://enseignant.education.sn/';
-                else if(ENVIRONMENT == 'testing')
-                    return 'http://w/pl/';
-                else if(ENVIRONMENT == 'development')
-                    return 'http://localhost/planete_enseignant/';
-
-                break;
-            case  'apps_local':
-                return 'http://localhost/apps.education.sn/';
-                break;
-            case  'referentiel':
-                return 'http://localhost:81/referentiel/';
-                break;
-        }
-        
-    }
-
-
-
 function apiPostData($base_url, $link_url, $array = array(), $type = 'json', $authorization = false, $credential = NULL)
     {
         /*Afficher la lise du personnel avec la fonction api_base_url en affectant $url = api_base_url($base_url).$link_url;
