@@ -21,7 +21,8 @@ class C_personnel extends MY_Controller
 
     }
 
-    public function recup_personnel()
+   /*
+	public function recup_personnel()
     {
      
 		$code_str = "1290902230";
@@ -31,5 +32,5 @@ class C_personnel extends MY_Controller
         
         echo json_encode($result, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
 
-    }
+    }*/
 }

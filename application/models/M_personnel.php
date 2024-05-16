@@ -21,6 +21,8 @@ class M_personnel extends CI_Model
 		//ve($array);
 		
 	}
+
+	/*
 	public function recup_personnel($code_str)
 	{
 
@@ -49,7 +51,7 @@ class M_personnel extends CI_Model
 		}
 		ve($t_personnel);
 		
-	}
+	}*/
 
 
 }
