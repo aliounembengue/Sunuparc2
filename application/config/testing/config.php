@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['base_url'] = 'http://localhost/sunuparc2/';
+$config['base_url'] = 'http://localhost/nadege/';
 
 $config['index_page'] = '';
 

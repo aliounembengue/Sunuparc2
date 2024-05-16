@@ -12,13 +12,17 @@
                         <li class="submenu">
                             <a href="#"><i class="fas fa-cube"></i> <span> Parc</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="<?php echo base_url(); ?>C_unmify" class="waves-effect menu" id="menu_unmify">Unmify</a></li>
-                                <li><a href="<?php echo base_url(); ?>C_table" class="waves-effect menu" id="menu_table">Table</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_ordinateur" class="waves-effect menu" id="menu_ordinateur">Ordinateurs</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_printer" class="waves-effect menu" id="menu_printer">Imprimantes</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_phone" class="waves-effect menu" id="menu_phone">Telephone</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_videopro" class="waves-effect menu" id="menu_videopro">video Projecteur</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_duplicop" class="waves-effect menu" id="menu_duplicop">duplicopieur</a></li>
+                            </ul>
+                        </li>
+						<li class="submenu">
+                            <a href="#"><i class="fas fa-cube"></i> <span> Personnel</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="<?php echo base_url(); ?>C_personnel" class="waves-effect menu" id="menu_personnel">Liste personnel</a></li>
                             </ul>
                         </li>
 							<li class="submenu">
