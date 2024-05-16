@@ -1,8 +1,153 @@
 <?php
+ function api_base_url($base)
+{
+    switch($base)
+    {
+        case  'apps':
+            return 'https://apps.education.sn/';
+            break;
+        case  'ien_link':
+            return 'https://ien.education.sn/';
+            break;
+        case  'management':
+            return 'https://management.education.sn/';
+            break;
+        case  'codeco':
+            return 'https://codeco.education.sn/';
+        case  'green':
+            return 'https://green.education.sn/';
+            break;
+}
+     }
+
 
 //API Post generic
-function apiPostData($base_url, $link_url, $array = array(), $type = 'json')
+
+function api_base_url($base)
+    {
+        switch($base)
+        {
+            case  'ien':
+                return 'https://apps.education.sn/';
+                break;
+            case  'apps':
+                return 'https://apps.education.sn/';
+                break;
+            case  'ien_link':
+                return 'https://ien.education.sn/';
+                break;
+            case  'management':
+                return 'https://management.education.sn/';
+                break;
+            case  'codeco':
+                return 'https://codeco.education.sn/';
+            case  'green':
+                return 'https://green.education.sn/';
+                break;
+            case  'so':
+                return 'https://senorientation.education.sn/';
+                break;
+            case  'enseignant':
+            
+                if(ENVIRONMENT == 'production')
+                    return 'https://enseignant.education.sn/';
+                else if(ENVIRONMENT == 'testing')
+                    return 'http://w/pl/';
+                else if(ENVIRONMENT == 'development')
+                    return 'http://localhost/planete_enseignant/';
+
+                break;
+            case  'apps_local':
+                return 'http://localhost/apps.education.sn/';
+                break;
+            case  'referentiel':
+                return 'http://localhost:81/referentiel/';
+                break;
+        }
+        
+    }
+
+
+
+function apiPostData($base_url, $link_url, $array = array(), $type = 'json', $authorization = false, $credential = NULL)
+    {
+        /*Afficher la lise du personnel avec la fonction api_base_url en affectant $url = api_base_url($base_url).$link_url;
+        dans le model **/
+        $url = api_base_url($base_url).$link_url;
+
+        //afficher la liste du personnel sans la declaration des noms
+        //$url = $base_url.$link_url;
+
+        $content =  $type == 'json' ? json_encode($array) : $content = $array;
+
+        if($authorization == true)
+        {
+            $auth_type  = $credential['auth_type'];
+            $token      = $credential['token'];
+
+            $options = array(
+                'http' => array(
+                    'method' => 'POST',
+                    'content' => $content,
+                    'header' => ["Content-Type: application/json\r\n" . "Accept: application/json\r\n" . "Authorization: ".$auth_type." ".$token]
+                ),
+                "ssl" => array("verify_peer"=>false, "verify_peer_name"=>false)
+            );
+        }
+        else
+        {
+            $options = array(
+                'http' => array(
+                    'method' => 'POST',
+                    'content' => $content,
+                    'header' => "Content-Type: application/json\r\n" . "Accept: application/json\r\n"
+                ),
+                "ssl" => array("verify_peer"=>false,"verify_peer_name"=>false)
+            );
+        }
+        //ve($options);
+        try
+        {
+            if($type == 'array') //send array POST
+            {
+                try{
+                    
+                    $result = file_get_contents($url, false, stream_context_create($options));
+
+                    $result = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $result);
+
+                    return json_decode($result, true);
+                }
+                catch(Exception $e){
+                     return [];
+                }
+            }
+            else if($type == 'json') //send json POST
+            {
+                try{   
+                                                     
+                    $result = file_get_contents($url, true, stream_context_create($options));
+
+                    $result = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $result);
+
+                    return json_decode($result);
+                }
+                catch(Exception $e){
+                    return [];
+                }
+            }
+            else
+                return [];
+        }
+        catch(Exception $e){
+            return $e->getMessage();
+        }
+    }
+
+
+function apiPostData_($base_url, $link_url, $array = array(), $type = 'json')
 {
+	
     try{
         $url = api_base_url($base_url).$link_url;
         if($type == 'array') //send array POST
@@ -46,9 +191,11 @@ function apiPostData($base_url, $link_url, $array = array(), $type = 'json')
                         "verify_peer_name"=>false
                     )
                 );
+				ve($base_url,$link_url,$array);
 
                 $result = file_get_contents($url, false, stream_context_create($options));
-
+				
+				
                 $result = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $result);
 
                 return json_decode($result);
@@ -67,6 +214,7 @@ function apiPostData($base_url, $link_url, $array = array(), $type = 'json')
 
 function apiGetData($base_url, $params, $authorization = false, $credential = [])
 {
+	
     try{
         $url = $base_url . $params;
         
