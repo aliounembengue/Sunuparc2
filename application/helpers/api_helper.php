@@ -5,7 +5,7 @@
 
 function apiPostData($base_url, $link_url, $array = array(), $type = 'json', $authorization = false, $credential = NULL)
     {
-        $url = api_base_url($base_url).$link_url;
+        $url = $base_url.$link_url;
 
         $content =  $type == 'json' ? json_encode($array) : $content = $array;
 
