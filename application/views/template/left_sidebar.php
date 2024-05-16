@@ -12,8 +12,6 @@
                         <li class="submenu">
                             <a href="#"><i class="fas fa-cube"></i> <span> Parc</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="<?php echo base_url(); ?>C_unmify" class="waves-effect menu" id="menu_unmify">Unmify</a></li>
-                                <li><a href="<?php echo base_url(); ?>C_table" class="waves-effect menu" id="menu_table">Table</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_ordinateur" class="waves-effect menu" id="menu_ordinateur">Ordinateurs</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_printer" class="waves-effect menu" id="menu_printer">Imprimantes</a></li>
                                 <li><a href="<?php echo base_url(); ?>C_phone" class="waves-effect menu" id="menu_phone">Telephone</a></li>

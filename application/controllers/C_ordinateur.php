@@ -13,7 +13,7 @@ class C_ordinateur extends MY_Controller
     {
         
        // $t_session              = init_session();
-	    $session_token          = $this->session->session_token;
+        $session_token          = $this->session->session_token;
         $range                  = "0-200";
         $data['ordinateurs']    = $this->ordi->list_ordinateur($session_token,$range);
 		

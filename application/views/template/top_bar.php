@@ -47,7 +47,7 @@
                             <img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31"
                                 alt="Soeng Souy">
                             <div class="user-text">
-                                <h6><?php echo $this->session->prenom." ".$this->session->nom; ?></h6>
+                                <h6><?php echo $this->session->prenom." ".$this->session->nom; ?>  </h6>
                                 <p class="text-muted mb-0">Administrator</p>
                             </div>
                         </span>
@@ -59,7 +59,7 @@
                                     class="avatar-img rounded-circle">
                             </div>
                             <div class="user-text">
-                                <h6><?php echo $this->session->prenom." ".$this->session->nom; ?></h6>
+                                <h6>Soeng Souy</h6>
                                 <p class="text-muted mb-0">Administrator</p>
                             </div>
                         </div>

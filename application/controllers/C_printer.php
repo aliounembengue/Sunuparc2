@@ -14,6 +14,8 @@ class C_printer extends MY_Controller
         
         //$t_session              = init_session();
         $session_token          = $this->session->session_token;
+       // $t_session              = init_session();
+        $session_token          = $this->session->session_token;
         $range                  = "0-200";
         $data['printers']    = $this->printer->list_printer($session_token,$range);
 
