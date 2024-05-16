@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_table extends MY_Controller
+class C_duplicopieur extends MY_Controller
 {
 
     public function __construct()
@@ -12,6 +12,6 @@ class C_table extends MY_Controller
 	public function index()
 	{
 		
-		$this->load->view('V_table');
+		$this->load->view('V_duplicopieur');
 	}
 }
