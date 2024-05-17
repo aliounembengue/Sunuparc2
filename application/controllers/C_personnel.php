@@ -16,6 +16,7 @@ class C_personnel extends MY_Controller
 		
         $data['personnel']    = $this->perso->list_personnel($code_str);
 		
+        
         $this->load->view('V_personnel',$data);
 
     }

@@ -22,19 +22,13 @@
 
 
 //API Post generic
-<<<<<<< HEAD
-=======
 
 >>>>>>> b9e64f96ad3889089256d1369f85c0e269f11b70
 function apiPostData($base_url, $link_url, $array = array(), $type = 'json', $authorization = false, $credential = NULL)
     {
-<<<<<<< HEAD
-        $url = $base_url.$link_url;
-=======
         /*Afficher la lise du personnel avec la fonction api_base_url en affectant $url = api_base_url($base_url).$link_url;
         dans le model **/
         $url = api_base_url($base_url).$link_url;
->>>>>>> fce1a24e447d843afaa6f5fb63349cf91fbe490e
 
         //afficher la liste du personnel sans la declaration des noms
         //$url = $base_url.$link_url;

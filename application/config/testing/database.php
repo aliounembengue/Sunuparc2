@@ -10,11 +10,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-<<<<<<< HEAD
-	'database' => 'ecole',
-=======
-	'database' => 'nadege',
->>>>>>> fce1a24e447d843afaa6f5fb63349cf91fbe490e
+	'database' => 'planete',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
