@@ -22,8 +22,6 @@
 
 
 //API Post generic
-
->>>>>>> b9e64f96ad3889089256d1369f85c0e269f11b70
 function apiPostData($base_url, $link_url, $array = array(), $type = 'json', $authorization = false, $credential = NULL)
     {
         /*Afficher la lise du personnel avec la fonction api_base_url en affectant $url = api_base_url($base_url).$link_url;
