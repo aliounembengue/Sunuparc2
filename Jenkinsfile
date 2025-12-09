@@ -4,13 +4,15 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://git.education.sn/cisse/sunuparc2.git'
+                git branch: 'master',
+                    url: 'https://git.education.sn/cisse/sunuparc2.git',
+                    credentialsId: 'jenkins-Gitlab'
             }
         }
 
         stage('Test') {
             steps {
-                echo "Pipeline OK — Code bien récupéré 🎉"
+                echo "Running tests..."
             }
         }
     }
