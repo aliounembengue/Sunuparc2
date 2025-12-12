@@ -6,7 +6,7 @@ pipeline {
             steps {
                 git branch: 'master',
                     url: 'https://git.education.sn/cisse/sunuparc2.git',
-                    credentialsId: 'jenkins-Gitlab'
+                    credentialsId: 'token'
             }
         }
 
