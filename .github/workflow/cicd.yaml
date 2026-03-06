@@ -1,0 +1,13 @@
+steps:
+  - uses: actions/checkout@v3
+
+  - name: Installer PHP
+    uses: shivammathur/setup-php@v2
+    with:
+      php-version: '8.2'
+
+  - name: Installer dépendances
+    run: composer install
+
+  - name: Lancer tests PHPUnit
+    run: ./vendor/bin/phpunit
