@@ -1,1 +1,5 @@
-image: IMAGE_URL
+containers:
+  - name: monapp
+    image: IMAGE_URL
+    ports:
+      - containerPort: 80
